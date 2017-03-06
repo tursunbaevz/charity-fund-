@@ -12,5 +12,5 @@
 .sp-tweet-item .date,.sp-tweet-item .source{font-size:10px}
 .sp-tweet-item .date{float:left}
 .sp-tweet-item .source{float:right}
-a.followme{display:block;background:url(../images/followme.png) no-repeat 0 5px;margin-top:10px;padding-left:20px;line-height:140%;margin:5px}
+a.followme{display:block;background:url(/followme.png) no-repeat 0 5px;margin-top:10px;padding-left:20px;line-height:140%;margin:5px}
 .sp-tweet-clr{clear:both}

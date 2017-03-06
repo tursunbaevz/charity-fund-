@@ -45,7 +45,7 @@
     });
 
     //Tooltip
-    $('[data-toggle="tooltip"]').tooltip();
+    // $('[data-toggle="tooltip"]').tooltip();
     
     $(document).on('click', '.sp-rating .star', function(event) {
         event.preventDefault();

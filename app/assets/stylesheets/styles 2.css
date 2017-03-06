@@ -14,7 +14,7 @@ div.lan_vertical_timeline .nav-tabs>li.active>a:focus{border:0;}
 div.lan_vertical_timeline .nav-tabs>li .cbp_tmlabel h3{font-size:14px;}
 div.lan_vertical_timeline .nav-tabs>li>a, 
 div.lan_vertical_timeline .nav-tabs>li.active .cbp_tmlabel h3{color: #c84700;}
-div.lan_vertical_timeline .nav-tabs>li.active .cbp_tmicon{background: #424242 url(../images/ico2.png) no-repeat  50% 50%;}
+div.lan_vertical_timeline .nav-tabs>li.active .cbp_tmicon{background: #424242 url(/ico2.png) no-repeat  50% 50%;}
 div.lan_vertical_timeline .nav-tabs {border-bottom:0;}
 div.lan_vertical_timeline .tab-pane img{width:100%;}
 div.lan_vertical_timeline .tab-pane h3{font-size: 18px;}
@@ -75,7 +75,7 @@ div.tab_contain{background:#fff;z-index:2;position:relative; padding-top:20px;}
 	-webkit-font-smoothing: antialiased;
 	position: absolute;
 	color: #fff;
-	background: #424242 url(../images/ico1.png) no-repeat  50% 50%;
+	background: #424242 url(/ico1.png) no-repeat  50% 50%;
 	border-radius: 50%;
 	box-shadow: 0 0 0 1px #d8d8d8;
 	text-align: center;

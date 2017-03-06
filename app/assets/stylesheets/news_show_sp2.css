@@ -7,9 +7,9 @@
 */
 h4.ns2-title {font-size:100%;font-weight:bold}
 a.ns2-readmore span,span.ns2-hits,a.ns2-comments {margin:0 5px 0 0;font-size:0.9em}
-a.ns2-readmore span {background:url(../images/more.png) no-repeat 0 0;padding:0 0 0 13px}
-span.ns2-hits {color:#666666;background:url(../images/hits.png) no-repeat 0 0;padding:0 0 0 14px}
-a.ns2-comments {background:url(../images/comments.png) no-repeat 0 0;padding:0 0 0 18px}
+a.ns2-readmore span {background:url(/more.png) no-repeat 0 0;padding:0 0 0 13px}
+span.ns2-hits {color:#666666;background:url(/hits.png) no-repeat 0 0;padding:0 0 0 14px}
+a.ns2-comments {background:url(/comments.png) no-repeat 0 0;padding:0 0 0 18px}
 img.ns2-image {max-width:100%;height:auto;}
 
 /*Blog type date*/
@@ -29,7 +29,7 @@ div.ns2-category {display:inline}
 
 /*Rating*/
 div.ns2-rating{height:16px;white-space:nowrap;margin:5px 0 0}
-div.ns2-rating-bar,div.ns2-rating-bar div{height:16px;background-image:url(../images/transparent_star.png);background-repeat:repeat-x}
+div.ns2-rating-bar,div.ns2-rating-bar div{height:16px;background-image:url(/transparent_star.png);background-repeat:repeat-x}
 div.ns2-rating-bar{width:80px;overflow:hidden;background-position:0 0}
 div.ns2-rating-bar div{background-position:0 -16px;display:block}
 
@@ -70,7 +70,7 @@ div.nssp2-default .ns2-art-pagination, div.nssp2-default .ns2-links-pagination{f
 	div.nssp2-default .ns2-art-pause, div.nssp2-default .ns2-links-pause,
 	div.nssp2-default .ns2-art-next, div.nssp2-default .ns2-links-next,
 	div.nssp2-default .ns2-art-pagination span, div.nssp2-default .ns2-links-pagination span{
-		background-image:url(../images/nav-buttons.png);
+		background-image:url(/nav-buttons.png);
 		background-repeat:no-repeat;
 		width:8px;
 		height:9px;

@@ -70,7 +70,7 @@ div.acymailing_module_success {
 }
 
 .refreshCaptchaModule{
-	background-image:url(../images/refresh.png);
+	background-image:url(/refresh.png);
 	width:16px;
 	height:16px;
 	display:block;

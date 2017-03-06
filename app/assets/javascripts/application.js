@@ -11,7 +11,13 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
 //= require jquery_ujs
 //= require turbolinks
+//= bootstrap.min
+//= require core.js
+
+//= require jquery.themepunch.plugins.min
+//= require jquery.themepunch.revolution.min
+//= require rs.home
+//= require main.js
 //= require_tree .

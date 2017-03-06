@@ -2347,11 +2347,11 @@ div.lan_breadcrumb {
   font-size: 18px;
 }
 .tp-leftarrow.default {
-  background: url(images/left-arrow.png) no-repeat 0 0;
+  background: url(/left-arrow.png) no-repeat 0 0;
   height: 110px;
 }
 .tp-rightarrow.default {
-  background: url(images/right-arrow.png) no-repeat 0 0;
+  background: url(/right-arrow.png) no-repeat 0 0;
   height: 110px;
 }
 
@@ -2436,7 +2436,7 @@ h4.ns2-title {
   margin: 0;
 }
 #sp-bottom1 {
-  background: url(images/map.png) no-repeat 20% 128%;
+  background: url(/map.png) no-repeat 20% 128%;
 }
 #sp-bottom1 img {
   float: left;
