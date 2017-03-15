@@ -16,6 +16,7 @@
 //= bootstrap.min
 //= require redactor-rails
 //= require redactor-rails/plugins
+
 //= require core.js
 
 //= require jquery.themepunch.plugins.min

@@ -15,6 +15,7 @@
 //= require turbolinks
 //= bootstrap.min
 //= require redactor-rails
+$('#redactor').redactor({ options });
 //= require core.js
 
 //= require jquery.themepunch.plugins.min
