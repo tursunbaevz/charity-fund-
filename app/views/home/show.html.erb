@@ -1,0 +1,23 @@
+<!-- start breadcrumbs -->
+<section id="sp-breadcrumbs">
+	<div class="container">
+	   <div class="row">
+	      <div id="sp-breadcrumb" class="col-sm-12 col-md-12">
+	         <div class="sp-column ">
+	            <div class="sp-module ">
+	               <div class="sp-module-content">
+	                  <div class="lan_page_title">
+	                     <span> <%= link_to 'News', news_path %>  </span>
+	                  </div>
+	               </div>
+	            </div>
+	         </div>
+	      </div>
+	   </div>
+	</div>
+</section>
+<!-- end breadcrumbs -->
+<div class="container">
+	<h1><%= @admin_news.title %></h1>
+	<h3><%= raw @admin_news.text %></h3>
+</div>

@@ -1,0 +1,27 @@
+	<!-- start breadcrumbs -->
+		<section id="sp-breadcrumbs">
+			<div class="container">
+			   <div class="row">
+			      <div id="sp-breadcrumb" class="col-sm-12 col-md-12">
+			         <div class="sp-column ">
+			            <div class="sp-module ">
+			               <div class="sp-module-content">
+			                  <div class="lan_page_title">
+			                     <span>News</span>
+			                  </div>
+			               </div>
+			            </div>
+			         </div>
+			      </div>
+			   </div>
+			</div>
+		</section>
+	<!-- end breadcrumbs -->
+
+<div class="container">
+	<% News.all.each do |n| %>
+		<h2> <a href="<%= show_path(n) %>"><%= n.title %></a></h2>
+
+		<h3><%=h truncate(n.text, :length => 400) %> </h3>
+	<% end %> 
+</div>

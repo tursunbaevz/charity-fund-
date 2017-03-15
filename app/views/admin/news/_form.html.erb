@@ -1,0 +1,46 @@
+<div class="container">
+  <%= form_for [:admin, @admin_news], html: {class: 'form-horizontal'} do |f| %>
+    <% if @admin_news.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@admin_news.errors.count, "error") %> prohibited this news from being saved:</h2>
+
+        <ul>
+        <% @admin_news.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+
+      <div class="form-group ">
+        <%= f.label :title, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-10">
+          <%= f.text_field :title, class: 'form-control' %>
+        </div>
+      </div>
+
+      <div class="form-group ">
+        <%= f.label :text, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-10">
+          <%= f.text_area :text, class: 'redactor', :rows => 40, :cols => 120 %>
+         
+
+        </div>
+      </div>
+
+      <div class="form-group ">
+        <%= f.label :is_published, class: 'col-sm-2 control-label' %>
+        <div class="col-sm-10">
+          <%= f.check_box :is_published, class: 'form-control' %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= f.submit class: 'btn btn-primary' %>
+        </div>
+      </div>
+  <% end %>
+    <%= link_to 'Back', admin_news_index_path %>
+
+</div>
