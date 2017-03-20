@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :news
     get '', to: 'news#index', as: 'home'
   end
-  devise_for :admins
+  devise_for :admin
   get 'test', to: 'home#test'
   get 'about', to: 'home#about'
   get 'news', to: 'home#news', as: 'news'

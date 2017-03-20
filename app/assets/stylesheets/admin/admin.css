@@ -12,6 +12,6 @@
  *
  *= require bootstrap.min
  *= require redactor-rails
- *= redactor-rails/plugins
+ 
  *= require_self
  */

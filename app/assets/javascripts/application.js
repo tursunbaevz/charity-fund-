@@ -12,13 +12,17 @@
 //
 //= require jquery
 //= require jquery.turbolinks
-//= require jquery_ujs
-//= bootstrap.min
-//= require core.js
 //= require turbolinks
+//= require jquery_ujs
+//= require bootstrap.min
 
 
-
+//= require jquery.sticky.js
+//= require jquery.stellar.js
+//= require jquery.circliful.js
+//= require nssp2.js
+//= require jquery.themepunch.plugins.min
+//= require jquery.themepunch.revolution.min
 //= require rs.home
 //= require main.js
 //= require_tree .

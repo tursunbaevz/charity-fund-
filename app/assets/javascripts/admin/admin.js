@@ -18,11 +18,4 @@
 $('#redactor').redactor();
 //= require turbolinks
 //= require core.js
-//= bootstrap.min
-
-
-//= require jquery.themepunch.plugins.min
-//= require jquery.themepunch.revolution.min
-//= require rs.home
-//= require main.js
 //= require_tree .
