@@ -100,36 +100,38 @@
                                        <div class="module">
                                           <div class="lan_vertical_timeline">
                                              <div class="lan_vertical_left">
+                                              <% News.all.last(4).each do |n| %>
                                                 <ul class="nav nav-tabs" role="tablist" id="myTab">
                                                    <li role="presentation" class="active">
                                                       <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
                                                          <ul class="cbp_tmtimeline">
-                                                         <% News.all.last(4).each do |n| %>
                                                             <li>
                                                                <div class="cbp_tmicon"></div>
                                                                <div class="cbp_tmlabel">
-                                                                  <h3><%= n.title %> </h3>
-                                                                  <p><%=h truncate(n.text, :length => 100) %></p>
-
+                                                               <h3><%= n.title %> </h3>
+                                                               <p><%=h truncate(n.text, :length => 100) %></p>
                                                                </div>
                                                             </li>
-                                                         <% end %>                                    
                                                          </ul>
                                                       </a>
                                                    </li>
                                                 </ul>
+                                              <% end %>                                    
                                              </div>
-                                              <div class="lan_vertical_right tab-content">
-                                                <div role="tabpanel" class="tab-pane active" id="home">
+                                             <% News.all.last(1).each do |n| %>
+                                               <div class="lan_vertical_right tab-content">
+                                                 <div role="tabpanel" class="tab-pane active" id="home">
                                                    <div class="tab_img">
                                                       <img src="http://placehold.it/508x340" alt="" />
                                                    </div>
                                                    <div class="tab_contain">
-                                                      <td></td></p>
-                                                      <a class="btn btn-primary" href="#">Read More</a>
+                                                     <p><%= n.title %></p>
+                                                      <p><%=h truncate(n.text, :length => 500) %></p>
+                                                      <a><%= link_to 'Read More',  news_path(@news), class: "btn btn-primary" %></a> 
                                                    </div>
-                                                </div>
+                                                 </div>
                                               </div>
+                                             <% end %>  
                                           </div>
                                           <div class="clear"></div>
                                        </div>
@@ -461,8 +463,7 @@
                                              <div id="ns2-art-wrap123" class="ns2-art-wrap nssp2-slide nssp2-default ">
                                                 <div class="ns2-art-pages nss2-inner">
                                                    <div class="ns2-page item active">
-                                                   <%= News.all.last(4).each do |n| %>
-
+                                                   <% News.all.last(4).each do |n| %>
                                                       <div class="ns2-page-inner">
                                                          <div class="ns2-row ns2-first ns2-odd">
                                                             <div class="ns2-row-inner">

@@ -12,12 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
-//= bootstrap.min
 //= require redactor-rails
 //= require redactor-rails/plugins
 
+$('#redactor').redactor();
+//= require turbolinks
 //= require core.js
+//= bootstrap.min
+
 
 //= require jquery.themepunch.plugins.min
 //= require jquery.themepunch.revolution.min
