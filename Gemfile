@@ -34,7 +34,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'redactor-rails'
 gem "carrierwave"
 gem "mini_magick"
-gem "carrierwave-mongoid", :require => "carrierwave/mongoid"
+
 
 gem 'jquery-turbolinks'
 # Use Unicorn as the app server

@@ -14,7 +14,7 @@
 
           <tr>
             <td><%= n.title + n.id.to_s %></td>  
-            <td><%= n.text  %></td>
+            <td><%= raw n.text  %></td>
             <td><%= check_box_tag 'is_published', '1', n.is_published %></td>
         
             <td> <%= link_to 'Show', admin_news_path(n),  class: 'btn btn-info' %>
@@ -28,4 +28,3 @@
 
   </div>
 </div>
-s

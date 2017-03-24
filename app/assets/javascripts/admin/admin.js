@@ -11,11 +11,12 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require redactor-rails
 //= require redactor-rails/plugins
 
 $('#redactor').redactor();
-//= require turbolinks
 //= require core.js
+//= require turbolinks
 //= require_tree .

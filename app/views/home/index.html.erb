@@ -103,13 +103,13 @@
                                               <% News.all.last(4).each do |n| %>
                                                 <ul class="nav nav-tabs" role="tablist" id="myTab">
                                                    <li role="presentation" class="active">
-                                                      <a href="#home" aria-controls="home" role="tab" data-toggle="tab">
+                                                      <a href="#home" aria-controls="home" role="tab"  data-toggle="tab">
                                                          <ul class="cbp_tmtimeline">
                                                             <li>
                                                                <div class="cbp_tmicon"></div>
                                                                <div class="cbp_tmlabel">
                                                                <h3><%= n.title %> </h3>
-                                                               <p><%=h truncate(n.text, :length => 100) %></p>
+                                                               <p><%= raw n.text.truncate(100) %></p>
                                                                </div>
                                                             </li>
                                                          </ul>
@@ -126,7 +126,7 @@
                                                    </div>
                                                    <div class="tab_contain">
                                                      <p><%= n.title %></p>
-                                                      <p><%=h truncate(n.text, :length => 500) %></p>
+                                                      <p><%= raw n.text.truncate(400) %></p>
                                                       <a><%= link_to 'Read More',  news_path(@news), class: "btn btn-primary" %></a> 
                                                    </div>
                                                  </div>
