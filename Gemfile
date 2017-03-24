@@ -34,6 +34,7 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'redactor-rails'
 gem "carrierwave"
 gem "mini_magick"
+gem "letter_opener", :group => :development
 
 
 gem 'jquery-turbolinks'

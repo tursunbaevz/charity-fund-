@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class AdminMailerTest < ActionMailer::TestCase
+class EmailMailerTest < ActionMailer::TestCase
   test "signup_confirmation" do
-    mail = AdminMailer.signup_confirmation
+    mail = EmailMailer.signup_confirmation
     assert_equal "Signup confirmation", mail.subject
     assert_equal ["to@example.org"], mail.to
     assert_equal ["from@example.com"], mail.from

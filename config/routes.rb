@@ -16,5 +16,5 @@ Rails.application.routes.draw do
 
   root 'home#index'  
 
-  resources :admins
+  resources :emails
 end
