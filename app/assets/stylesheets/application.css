@@ -37,3 +37,8 @@
 .lan_page_title a, a.btn {
 	color: #fff;
 }
+
+.sppb-addon-title {
+	font-size: 24px;
+	font-weight: 500;
+}
