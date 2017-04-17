@@ -137,9 +137,11 @@
                                                                   <div style="padding:3px 3px 3px 3px">
                                                                      <div class="ns2-inner">
                                                                         <div class="ns2-date-blog">
-                                                                        <span class="ns2_date_day"></span>
-                                                                            <h4><%= n.created_at.strftime("%m/%d/%Y")  %></h4>
-                                                                        </div>
+                                                                           <span class="ns2_date_day"><%= n.created_at.strftime("%d") %></span>
+                                                                           <div class="ns2_date_month_year">
+                                                                              <span class="ns2_date_month"><%= n.created_at.strftime("%b")  %></span>
+                                                                              <span class="ns2_date_year"><%= n.created_at.strftime("%Y")  %></span>
+                                                                           </div>
                                                                         </div>
                                                                         <h4 class="ns2-title">
                                                                            <%= link_to n.title, show_path(n) %> 
