@@ -34,6 +34,8 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'redactor-rails'
 gem "carrierwave"
 gem "mini_magick"
+gem 'rmagick', "~> 2.13.3", :require => false
+
 gem "letter_opener", :group => :development
 
 
