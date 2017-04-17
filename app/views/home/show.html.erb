@@ -19,5 +19,6 @@
 <!-- end breadcrumbs -->
 <div class="container">
 	<h1><%= @admin_news.title %></h1>
+	<h3><%= @admin_news.created_at.strftime("%m/%d/%Y")  %></h3>
 	<h3><%= raw @admin_news.text %></h3>
 </div>

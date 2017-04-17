@@ -99,37 +99,16 @@
                                     <div class="sppb-addon-content">
                                        <div class="module">
                                           <div class="lan_vertical_timeline">
-                                             <div class="lan_vertical_left">
-                                              <% News.all.last(4).each do |n| %>
-                                                <ul class="nav nav-tabs" role="tablist" id="myTab">
-                                                   <li role="presentation" class="active">
-                                                      <a href="#home" aria-controls="home" role="tab"  data-toggle="tab">
-                                                         <ul class="cbp_tmtimeline">
-                                                            <li>
-                                                               <div class="cbp_tmicon"></div>
-                                                               <div class="cbp_tmlabel">
-                                                               <h3><%= n.title %> </h3>
-                                                               <p><%= raw n.text.truncate(100) %></p>
-
-                                                               </div>
-                                                            </li>
-                                                         </ul>
-                                                      </a>
-                                                   </li>
-                                                </ul>
-                                              <% end %>                                    
-                                             </div>
                                              <% News.all.last(1).each do |n| %>
-                                               <div class="lan_vertical_right tab-content">
-                                                 <div role="tabpanel" class="tab-pane active" id="home">
+                                              <div class="lan_vertical_right tab-content">
+                                                <div role="tabpanel" class="tab-pane active" id="home">
                                                    <div class="tab_img">
                                                       <img src="http://placehold.it/508x340" alt="" />
                                                    </div>
                                                    <div class="tab_contain">
-                                                     <p><%= n.title %></p>
+                                                      <h2><%= n.title %> </h2>  
                                                       <p><%= raw n.text.truncate(400) %></p>
-                                                      
-                                                      <a><%= link_to 'Read More',  news_path(@news), class: "btn btn-primary" %></a> 
+                                                      <a class="btn btn-primary" href="<%= show_path(n) %>">  Read more</a>
                                                    </div>
                                                  </div>
                                               </div>
@@ -147,30 +126,31 @@
                                     <div class="sppb-addon-content">
                                        <div id="ns2-110" class="nssp2 ns2-110">
                                           <div class="ns2-wrap">
-                                             <div id="ns2-art-wrap110" class="ns2-art-wrap nssp2-slide nssp2-fade nssp2-default ">
+                                             <!-- <div id="ns2-art-wrap110" class="ns2-art-wrap nssp2-slide nssp2-fade nssp2-default "> -->
                                                 <div class="ns2-art-pages nss2-inner">
                                                    <div class="ns2-page item active">
-                                                      <div class="ns2-page-inner">
+                                                      <div class="ns2-page-inner"> 
                                                          <div class="ns2-row ns2-first ns2-odd">
+                                                          <% News.all.last(3).each do |n| %>
                                                             <div class="ns2-row-inner">
                                                                <div class="ns2-column flt-left col-1">
                                                                   <div style="padding:3px 3px 3px 3px">
                                                                      <div class="ns2-inner">
                                                                         <div class="ns2-date-blog">
-                                                                           <span class="ns2_date_day">09</span>
-                                                                           <div class="ns2_date_month_year"><span class="ns2_date_month">Mar</span><span class="ns2_date_year">2015</span></div>
+                                                                        <span class="ns2_date_day"></span>
+                                                                            <h4><%= n.created_at.strftime("%m/%d/%Y")  %></h4>
+                                                                        </div>
                                                                         </div>
                                                                         <h4 class="ns2-title">
-                                                                           <a href="single-page.html">
-                                                                           Maecenas be lgula molestie lobort
-                                                                           </a>
+                                                                           <%= link_to n.title, show_path(n) %> 
                                                                         </h4>
                                                                         <div class="ns2-tools">
                                                                         </div>
-                                                                        <a href="single-page.html">
+                                                                        <a href="n.id">
                                                                         <img class="ns2-image" style="float:left;margin:0 10px 0 0" src="http://placehold.it/125x90" alt="Maecenas be lgula molestie lobort" title="Maecenas be lgula molestie lobort" />
                                                                         </a>
-                                                                        <p class="ns2-introtext">Integer vitae massa quis enim the euismod be malesuada. Proin congue eleifend volutpat on ipsumen erroribis</p>
+                                                                        <p class="ns2-introtext">
+                                                                         <p><%= raw n.text.truncate(125) %></p>
                                                                         <div class="ns2-social">
                                                                         </div>
                                                                         <div class="clear"></div>
@@ -181,223 +161,9 @@
                                                             </div>
                                                             <div class="clear"></div>
                                                          </div>
-                                                         <div class="ns2-row  ns2-even">
-                                                            <div class="ns2-row-inner">
-                                                               <div class="ns2-column flt-left col-1">
-                                                                  <div style="padding:3px 3px 3px 3px">
-                                                                     <div class="ns2-inner">
-                                                                        <div class="ns2-date-blog">
-                                                                           <span class="ns2_date_day">09</span>
-                                                                           <div class="ns2_date_month_year"><span class="ns2_date_month">Mar</span><span class="ns2_date_year">2015</span></div>
-                                                                        </div>
-                                                                        <h4 class="ns2-title">
-                                                                           <a href="single-page.html">
-                                                                           Quisque convallis orce erohasellu
-                                                                           </a>
-                                                                        </h4>
-                                                                        <div class="ns2-tools">
-                                                                        </div>
-                                                                        <a href="single-page.html">
-                                                                        <img class="ns2-image" style="float:left;margin:0 10px 0 0" src="http://placehold.it/125x90" alt="Quisque convallis orce erohasellu" title="Quisque convallis orce erohasellu" />
-                                                                        </a>
-                                                                        <p class="ns2-introtext">Integer vitae massa quis enim the euismod be malesuada. Proin congue eleifend volutpat on ipsumen erroribis </p>
-                                                                        <div class="ns2-social">
-                                                                        </div>
-                                                                        <div class="clear"></div>
-                                                                     </div>
-                                                                  </div>
-                                                               </div>
-                                                               <div class="clear"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                         </div>
-                                                         <div class="ns2-row  ns2-odd">
-                                                            <div class="ns2-row-inner">
-                                                               <div class="ns2-column flt-left col-1">
-                                                                  <div style="padding:3px 3px 3px 3px">
-                                                                     <div class="ns2-inner">
-                                                                        <div class="ns2-date-blog">
-                                                                           <span class="ns2_date_day">09</span>
-                                                                           <div class="ns2_date_month_year"><span class="ns2_date_month">Mar</span><span class="ns2_date_year">2015</span></div>
-                                                                        </div>
-                                                                        <h4 class="ns2-title">
-                                                                           <a href="single-page.html">
-                                                                           Fusce pulvinar consectetur erath
-                                                                           </a>
-                                                                        </h4>
-                                                                        <div class="ns2-tools">
-                                                                        </div>
-                                                                        <a href="single-page.html">
-                                                                        <img class="ns2-image" style="float:left;margin:0 10px 0 0" src="http://placehold.it/125x90" alt="Fusce pulvinar consectetur erath" title="Fusce pulvinar consectetur erath" />
-                                                                        </a>
-                                                                        <p class="ns2-introtext">Integer vitae massa quis enim the euismod be malesuada. Proin congue eleifend volutpat on ipsumen erroribis</p>
-                                                                        <div class="ns2-social">
-                                                                        </div>
-                                                                        <div class="clear"></div>
-                                                                     </div>
-                                                                  </div>
-                                                               </div>
-                                                               <div class="clear"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                         </div>
-                                                         <div class="ns2-row  ns2-even">
-                                                            <div class="ns2-row-inner">
-                                                               <div class="ns2-column flt-left col-1">
-                                                                  <div style="padding:3px 3px 3px 3px">
-                                                                     <div class="ns2-inner">
-                                                                        <div class="ns2-date-blog">
-                                                                           <span class="ns2_date_day">09</span>
-                                                                           <div class="ns2_date_month_year"><span class="ns2_date_month">Mar</span><span class="ns2_date_year">2015</span></div>
-                                                                        </div>
-                                                                        <h4 class="ns2-title">
-                                                                           <a href="single-page.html">
-                                                                           Nullam velitmi feugiat etarcu neeh
-                                                                           </a>
-                                                                        </h4>
-                                                                        <div class="ns2-tools">
-                                                                        </div>
-                                                                        <a href="single-page.html">
-                                                                        <img class="ns2-image" style="float:left;margin:0 10px 0 0" src="http://placehold.it/125x90" alt="Nullam velitmi feugiat etarcu neeh" title="Nullam velitmi feugiat etarcu neeh" />
-                                                                        </a>
-                                                                        <p class="ns2-introtext">Integer vitae massa quis enim the euismod be malesuada. Proin congue eleifend volutpat on ipsumen erroribis</p>
-                                                                        <div class="ns2-social">
-                                                                        </div>
-                                                                        <div class="clear"></div>
-                                                                     </div>
-                                                                  </div>
-                                                               </div>
-                                                               <div class="clear"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                         </div>
-                                                         <div class="clear"></div>
-                                                      </div>
-                                                      <!--end ns2-page-inner-->
-                                                   </div>
-                                                   <div class="ns2-page item">
-                                                      <div class="ns2-page-inner">
-                                                         <div class="ns2-row ns2-first ns2-odd">
-                                                            <div class="ns2-row-inner">
-                                                               <div class="ns2-column flt-left col-1">
-                                                                  <div style="padding:3px 3px 3px 3px">
-                                                                     <div class="ns2-inner">
-                                                                        <div class="ns2-date-blog">
-                                                                           <span class="ns2_date_day">21</span>
-                                                                           <div class="ns2_date_month_year"><span class="ns2_date_month">Mar</span><span class="ns2_date_year">2015</span></div>
-                                                                        </div>
-                                                                        <h4 class="ns2-title">
-                                                                           <a href="single-page.html">
-                                                                           Praesent tempus euurna faucibus
-                                                                           </a>
-                                                                        </h4>
-                                                                        <div class="ns2-tools">
-                                                                        </div>
-                                                                        <a href="single-page.html">
-                                                                        <img class="ns2-image" style="float:left;margin:0 10px 0 0" src="http://placehold.it/125x90" alt="Praesent tempus euurna faucibus" title="Praesent tempus euurna faucibus" />
-                                                                        </a>
-                                                                        <p class="ns2-introtext">Integer vitae massa quis enim the euismod be malesuada. Proin congue eleifend volutpat on ipsumen erroribis</p>
-                                                                        <div class="ns2-social">
-                                                                        </div>
-                                                                        <div class="clear"></div>
-                                                                     </div>
-                                                                  </div>
-                                                               </div>
-                                                               <div class="clear"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                         </div>
-                                                         <div class="ns2-row  ns2-even">
-                                                            <div class="ns2-row-inner">
-                                                               <div class="ns2-column flt-left col-1">
-                                                                  <div style="padding:3px 3px 3px 3px">
-                                                                     <div class="ns2-inner">
-                                                                        <div class="ns2-date-blog">
-                                                                           <span class="ns2_date_day">21</span>
-                                                                           <div class="ns2_date_month_year"><span class="ns2_date_month">Mar</span><span class="ns2_date_year">2015</span></div>
-                                                                        </div>
-                                                                        <h4 class="ns2-title">
-                                                                           <a href="single-page.html">
-                                                                           Donec lobortis tristique temp bero
-                                                                           </a>
-                                                                        </h4>
-                                                                        <div class="ns2-tools">
-                                                                        </div>
-                                                                        <a href="single-page.html">
-                                                                        <img class="ns2-image" style="float:left;margin:0 10px 0 0" src="http://placehold.it/125x90" alt="Donec lobortis tristique temp bero" title="Donec lobortis tristique temp bero" />
-                                                                        </a>
-                                                                        <p class="ns2-introtext">Integer vitae massa quis enim the euismod be malesuada. Proin congue eleifend volutpat on ipsumen erroribis</p>
-                                                                        <div class="ns2-social">
-                                                                        </div>
-                                                                        <div class="clear"></div>
-                                                                     </div>
-                                                                  </div>
-                                                               </div>
-                                                               <div style="clear:both"></div>
-                                                            </div>
-                                                            <div style="clear:both"></div>
-                                                         </div>
-                                                         <div class="ns2-row  ns2-odd">
-                                                            <div class="ns2-row-inner">
-                                                               <div class="ns2-column flt-left col-1">
-                                                                  <div style="padding:3px 3px 3px 3px">
-                                                                     <div class="ns2-inner">
-                                                                        <div class="ns2-date-blog">
-                                                                           <span class="ns2_date_day">21</span>
-                                                                           <div class="ns2_date_month_year"><span class="ns2_date_month">Mar</span><span class="ns2_date_year">2015</span></div>
-                                                                        </div>
-                                                                        <h4 class="ns2-title">
-                                                                           <a href="single-page.html">
-                                                                           Bounding in the Work of the Lord
-                                                                           </a>
-                                                                        </h4>
-                                                                        <div class="ns2-tools">
-                                                                        </div>
-                                                                        <a href="single-page.html">
-                                                                        <img class="ns2-image" style="float:left;margin:0 10px 0 0" src="http://placehold.it/125x90" alt="Bounding in the Work of the Lord" title="Bounding in the Work of the Lord" />
-                                                                        </a>
-                                                                        <p class="ns2-introtext">Integer vitae massa quis enim the euismod be malesuada. Proin congue eleifend volutpat on ipsumen erroribis</p>
-                                                                        <div class="ns2-social">
-                                                                        </div>
-                                                                        <div class="clear"></div>
-                                                                     </div>
-                                                                  </div>
-                                                               </div>
-                                                               <div class="clear"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                         </div>
-                                                         <div class="ns2-row  ns2-even">
-                                                            <div class="ns2-row-inner">
-                                                               <div class="ns2-column flt-left col-1">
-                                                                  <div style="padding:3px 3px 3px 3px">
-                                                                     <div class="ns2-inner">
-                                                                        <div class="ns2-date-blog">
-                                                                           <span class="ns2_date_day">21</span>
-                                                                           <div class="ns2_date_month_year"><span class="ns2_date_month">Mar</span><span class="ns2_date_year">2015</span></div>
-                                                                        </div>
-                                                                        <h4 class="ns2-title">
-                                                                           <a href="single-page.html">
-                                                                           Proin facilisis egest pellentesque																													</a>
-                                                                        </h4>
-                                                                        <div class="ns2-tools">
-                                                                        </div>
-                                                                        <a href="single-page.html">
-                                                                        <img class="ns2-image" style="float:left;margin:0 10px 0 0" src="http://placehold.it/125x90" alt="Proin facilisis egest pellentesque" title="Proin facilisis egest pellentesque" />
-                                                                        </a>
-                                                                        <p class="ns2-introtext">Integer vitae massa quis enim the euismod be malesuada. Proin congue eleifend volutpat on ipsumen erroribis</p>
-                                                                        <div class="ns2-social">
-                                                                        </div>
-                                                                        <div class="clear"></div>
-                                                                     </div>
-                                                                  </div>
-                                                               </div>
-                                                               <div class="clear"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                         </div>
-                                                         <div class="clear"></div>
-                                                      </div>
+                                                         <% end %>
+                                                      <!--end ns2-page-inner-->                        
+                                           
                                                       <!--end ns2-page-inner-->
                                                    </div>
                                                 </div>
@@ -406,7 +172,7 @@
                                                    <div class="clear"></div>
                                                 </div>
                                                 <div class="clear"></div>
-                                             </div>
+                                             <!-- </div> -->
                                              <!--End article layout-->
                                              <!--Links Layout-->
                                              <!--End Links Layout-->
@@ -419,7 +185,8 @@
                            </div>
                         </div>
                      </div>
-                  </section>
+                     <!-- Second section for Latest Events -->
+                  <!-- </section>
                   <section id="lan_donate" class="sppb-section " style="padding:80px 0;color:#ffffff;background-image: url(/donate.png);background-repeat:no-repeat;background-size:cover;background-attachment:fixed;background-position:50% 50%;">
                      <div class="sppb-container">
                         <div class="sppb-row">
@@ -438,22 +205,22 @@
                            </div>
                         </div>
                      </div>
-                  </section>
-                  <section class="sppb-section " style="padding:30px 0 0 0;">
+                  </section> -->
+                  <!-- <section class="sppb-section " style="padding:30px 0 0 0;">
                      <div class="sppb-container">
                         <div class="sppb-row">
                            <div class="sppb-col-sm-12">
                               <div class="sppb-addon-container sppb-wow fadeInRight">
                                  <div class="sppb-addon sppb-addon-text-block sppb-text-left lan_title">
-                                    <h3 class="sppb-addon-title">Latest News</h3>
+                                    <h3 class="sppb-addon-title">Latest Events</h3>
                                     <div class="sppb-addon-content"></div>
                                  </div>
                               </div>
                            </div>
                         </div>
                      </div>
-                  </section>
-                  <section id="lan_events" class="sppb-section" style="padding:45px 0 55px 0;">
+                  </section> -->
+                 <!--  <section id="lan_events" class="sppb-section" style="padding:45px 0 55px 0;">
                      <div class="sppb-container">
                         <div class="sppb-row">
                            <div class="sppb-col-sm-12">
@@ -462,93 +229,55 @@
                                     <div class="sppb-addon-content">
                                        <div id="ns2-123" class="nssp2 ns2-123">
                                           <div class="ns2-wrap">
-                                             <div id="ns2-art-wrap123" class="ns2-art-wrap nssp2-slide nssp2-default ">
-                                                <div class="ns2-art-pages nss2-inner">
-                                                   <div class="ns2-page item active">
-                                                   <% News.all.last(4).each do |n| %>
-                                                      <div class="ns2-page-inner">
-                                                         <div class="ns2-row ns2-first ns2-odd">
-                                                            <div class="ns2-row-inner">
-                                                               <div class="ns2-column flt-left col-4">
-                                                                  <div style="padding:0 15px">
-                                                                     <div class="ns2-inner">
+                                             <div class="ns2-art-pages nss2-inner">
+                                                <div class="ns2-page item active">
+                                                 <% News.all.last(4).each do |n| %>
+                                                   <div class="ns2-page-inner">
+                                                      <div class="ns2-row ns2-first ns2-odd">
+                                                         <div class="ns2-row-inner">
+                                                            <div class="ns2-column flt-left col-4">
+                                                               <div style="padding:0 15px">
+                                                                  <div class="ns2-inner">
+                                                                     <a href="single-page.html">
+                                                                     <img class="ns2-image" style="float:left;margin:0 0 20px 0" src="http://placehold.it/280x190" alt="Maecenas be lgula molestie lobort" title="Maecenas be lgula molestie lobort" />
+                                                                     </a>
+                                                                     <h4 class="ns2-title">
                                                                         <a href="single-page.html">
-                                                                        <img class="ns2-image" style="float:left;margin:0 0 20px 0" src="http://placehold.it/280x190" alt="Maecenas be lgula molestie lobort" title="Maecenas be lgula molestie lobort" />
+                                                                        <%= n.title %>
                                                                         </a>
-                                                                        <h4 class="ns2-title">
-                                                                           <a href="single-page.html">
-                                                                           <%= n.title %>
-                                                                           </a>
-                                                                        </h4>
-                                                                        <div class="ns2-tools">
-                                                                           <div class="ns2-created">
-                                                                              Monday, 09 March 2015 07:53 
-                                                                           </div>
+                                                                     </h4>
+                                                                     <div class="ns2-tools">
+                                                                        <div class="ns2-created">
+                                                                           Monday, 09 March 2015 07:53 
                                                                         </div>
-                                                                        <p class="ns2-introtext"> <%=h truncate(n.text, :length => 100) %> </p>
-                                                                        <div class="ns2-social">
-                                                                        </div>
-                                                                        <div class="ns2-links">
-                                                                           <a class="sppb-btn sppb-btn-primary ns2-readmore" href="single-page.html"><span>Read More</span></a>
-                                                                        </div>
-                                                                        <div class="clear"></div>
                                                                      </div>
+                                                                     <p class="ns2-introtext">           <p><%= raw n.text.truncate(200) %></p>
+                                                                     <div class="ns2-social">
+                                                                     </div>
+                                                                     <div class="ns2-links">
+                                                                        <a class="sppb-btn sppb-btn-primary ns2-readmore" href="single-page.html"><span>Read More</span></a>
+                                                                     </div>
+                                                                     <div class="clear"></div>
                                                                   </div>
                                                                </div>
-                                                               <div class="clear"></div>
-                                                            </div>
+                                                             </div>
                                                             <div class="clear"></div>
                                                          </div>
                                                          <div class="clear"></div>
                                                       </div>
-                                                      <% end %>
-                                                      <!--end ns2-page-inner-->
+                                                      <div class="clear"></div>
                                                    </div>
-                                                   <div class="ns2-page item">
-                                                      <div class="ns2-page-inner">
-                                                         <div class="ns2-row ns2-first ns2-odd">
-                                                            <div class="ns2-row-inner">
-                                                               <div class="ns2-column flt-left col-4">
-                                                                  <div style="padding:0 15px">
-                                                                     <div class="ns2-inner">
-                                                                        <a href="single-page.html">
-                                                                        <img class="ns2-image" style="float:left;margin:0 0 20px 0" src="http://placehold.it/280x190" alt="Praesent tempus euurna faucibus" title="Praesent tempus euurna faucibus" />
-                                                                        </a>
-                                                                        <h4 class="ns2-title">
-                                                                           <a href="single-page.html">
-                                                                           Praesent tempus euurna faucibus
-                                                                           </a>
-                                                                        </h4>
-                                                                        <div class="ns2-tools">
-                                                                           <div class="ns2-created">
-                                                                              Saturday, 21 March 2015 23:08 
-                                                                           </div>
-                                                                        </div>
-                                                                        <p class="ns2-introtext">Integer vitae massa quis enim the euismod be malesuada. Proin congue eleifend volutpat on ipsumen erroribis</p>
-                                                                        <div class="ns2-social">
-                                                                        </div>
-                                                                        <div class="ns2-links">
-                                                                           <a class="sppb-btn sppb-btn-primary ns2-readmore" href="single-page.html"><span>Read More</span></a>
-                                                                        </div>
-                                                                        <div class="clear"></div>
-                                                                     </div>
-                                                                  </div>
-                                                               </div>
-                                                               <div class="clear"></div>
-                                                            </div>
-                                                            <div class="clear"></div>
-                                                         </div>
-                                                         <div class="clear"></div>
-                                                      </div>
-                                                      <!--end ns2-page-inner-->
-                                                   </div>
+                                                  <% end %>
+                                                   <!--end ns2-page-inner-->
                                                 </div>
-                                                <div class="clear"></div>
-                                                <div class="ns2-art-controllers">
-                                                   <div class="clear"></div>
                                                 </div>
+                                             </div>
+                                             <div class="clear"></div>
+                                             <div class="ns2-art-controllers">
                                                 <div class="clear"></div>
                                              </div>
+                                             <div class="clear"></div>
+                                         
                                              <!--End article layout-->
                                              <!--Links Layout-->
                                              <!--End Links Layout-->
@@ -567,5 +296,5 @@
          </div>
       </div>
    </div>
-</section>
+</section> 
 <!-- end main body -->
