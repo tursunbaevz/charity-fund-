@@ -11,9 +11,11 @@
 * file per style scope.
 *
 
+*= require pure-min
 *= require bootstrap.min
-*= require scaffolds
+
 *= require settings
+
 *= require preset1
 
 *= require redactor-rails
@@ -21,6 +23,7 @@
 
 
 *= require_tree .
+*= stub scaffolds
 *= stub styles_2
 *= stub styles
 *= require_self
