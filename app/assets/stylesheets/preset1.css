@@ -1,8 +1,11 @@
-a {
+a, a:visited {
   color: #d96741;
 }
 a:hover {
   color: #c14d27;
+}
+a:hover {
+  background-color: transparent;
 }
 .sp-megamenu-parent >li.active>a,
 .sp-megamenu-parent >li:hover>a {
