@@ -11,10 +11,9 @@
 * file per style scope.
 *
 
-*= require pure-min
 *= require bootstrap.min
 
-*= require settings
+
 
 *= require preset1
 
@@ -28,3 +27,13 @@
 *= stub styles
 *= require_self
 */
+
+.ns2-title {
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+
+.lan_page_title a {
+	color: #fff;
+}
