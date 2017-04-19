@@ -70,6 +70,6 @@ class Admin::NewsController < ApplicationController
 
     # Never trust parameters from the scary internet, only a1llow the white list through.
     def admin_news_params
-      params.require(:news).permit(:title, :text, :is_published, :name)
+      params.require(:news).permit(:title, :text, :is_published, :name, :image )
     end
 end

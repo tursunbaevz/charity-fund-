@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 
-
+	<%= image_tag @admin_news.image_url(:thumb) if @admin_news.image? %>
 	<h3><%= @admin_news.title %></h3>	
 	<h3><%= raw @admin_news.text %></h3> 
 

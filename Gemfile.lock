@@ -141,6 +141,7 @@ GEM
       orm_adapter
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
+    rmagick (2.13.4)
     sass (3.4.23)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -199,6 +200,7 @@ DEPENDENCIES
   mini_magick
   rails (= 4.2.5)
   redactor-rails
+  rmagick (~> 2.13.3)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   sqlite3
