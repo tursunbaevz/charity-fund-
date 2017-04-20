@@ -11,7 +11,9 @@
  * file per style scope.
  *
  *= require bootstrap.min
- *= require redactor-rails
+ *= require admin/redactor
  
  *= require_self
  */
+
+

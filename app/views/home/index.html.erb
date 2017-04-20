@@ -87,11 +87,13 @@
                                              <% News.all.last(1).each do |n| %>
                                               <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane active" id="home">
+                                                   
                                                    <div class="tab_img">
-                                                      <img src="<%= n.image_url(:med) %>" alt="" />
+                                                      <a href="<%= show_path(n) %>" ><img src="<%= n.image_url(:med) %>" alt="" /></a>
                                                    </div>
                                                    <div class="tab_contain">
-                                                      <h2><%= n.title %> </h2>  
+
+                                                      <h2><%= link_to n.title, show_path(n) %> </h2>  
                                                       <p><%= raw n.text.truncate(400) %></p>
                                                       <a class="btn btn-primary" href="<%= show_path(n) %>">  Read more</a>
                                                    </div>

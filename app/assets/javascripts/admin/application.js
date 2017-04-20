@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery.turbolinks
 //= require jquery_ujs
-//= require redactor-rails
-//= require redactor-rails/plugins
+//= require redactor_rails/redactor
+//= require redactor_rails/config
 
 //= require_tree .
