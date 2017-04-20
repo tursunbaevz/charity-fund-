@@ -16,7 +16,4 @@
 //= require redactor-rails
 //= require redactor-rails/plugins
 
-$('#redactor').redactor();
-//= require core.js
-//= require turbolinks
 //= require_tree .

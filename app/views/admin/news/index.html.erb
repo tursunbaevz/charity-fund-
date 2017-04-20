@@ -14,7 +14,7 @@
 
           <tr>
             <td><%= n.title + n.id.to_s %></td>  
-            <td><%= raw n.text  %></td>
+            <td><%= strip_tags n.text  %></td>
             <td><%= check_box_tag 'is_published', '1', n.is_published %></td>
             <td><%= image_tag n.image_url(:thumb) if n.image? %></td>
 

@@ -22,13 +22,5 @@ window.init_redactor = function(){
       });
 }
 
-$('.redactor').redactor(
-  // "lang":'zh_tw'
-  { "plugins": ['fontsize',
-              'fontcolor',
-              'fontfamily',
-              'fullscreen',
-              'textdirection',
-              'clips']
-  });
-$(document).on( 'ready page:load', window.init_redactor );
+$(document).ready( window.init_redactor );
+$(window).bind('page:change', window.init_redactor);

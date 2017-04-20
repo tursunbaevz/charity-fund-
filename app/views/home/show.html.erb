@@ -18,7 +18,32 @@
 </section>
 <!-- end breadcrumbs -->
 <div class="container">
-	<h1><%= @admin_news.title %></h1>
-	<h3><%= @admin_news.created_at.strftime("%m/%d/%Y")  %></h3>
-	<h3><%= raw @admin_news.text %></h3>
+	<div id="k2Container" class="lan_event_details itemView">
+
+		<div class="itemHeader">
+			<h2 class="itemTitle"><%= @admin_news.title %></h2>
+			<span class="itemDateCreated"><%= @admin_news.created_at.strftime("%m/%d/%Y")  %></span>
+		</div>
+
+		<div class="itemBody">
+
+		  <% if !@admin_news.image_url(:big).nil? %>
+		      <div class="itemImageBlock">
+		         <span class="itemImage">
+		         <img src="<%= @admin_news.image_url(:big) %>" alt="Fusce pulvinar consectetur">
+		         </span>
+		         <div class="clr"></div>
+		      </div>
+	      <% end %>
+	     
+	      <!-- Item fulltext -->
+	      <div class="itemFullText">
+	        <%= raw @admin_news.text %>
+	      </div>
+
+	      <div class="clr"></div>
+	      <div class="clr"></div>
+	   </div>
+   </div>
+
 </div>
