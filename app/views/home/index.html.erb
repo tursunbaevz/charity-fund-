@@ -88,7 +88,7 @@
                                               <div class="tab-content">
                                                 <div role="tabpanel" class="tab-pane active" id="home">
                                                    <div class="tab_img">
-                                                      <img src="http://placehold.it/508x340" alt="" />
+                                                      <img src="<%= n.image_url(:med) %>" alt="" />
                                                    </div>
                                                    <div class="tab_contain">
                                                       <h2><%= n.title %> </h2>  
@@ -134,7 +134,12 @@
                                                                         <div class="ns2-tools">
                                                                         </div>
                                                                         <a href="<%= show_path(n) %>">
-                                                                        <img class="ns2-image" style="float:left;margin:0 10px 0 0" src="http://placehold.it/125x90" alt="Maecenas be lgula molestie lobort" title="Maecenas be lgula molestie lobort" />
+                                                                        <% if n.image_url(:thumb).nil? %>
+                                                                           <img class="ns2-image" style="float:left;margin:0 10px 0 0" src="http://placehold.it/125x90" alt="Maecenas be lgula molestie lobort" title="Maecenas be lgula molestie lobort" />
+                                                                        <% else %>
+                                                                           <img class="ns2-image" style="float:left;margin:0 10px 0 0; max-width: 125px;" src="<%= n.image_url(:thumb) %>" alt="" />
+                                                                        <% end %>
+
                                                                         </a>
                                                                         <p class="ns2-introtext">
                                                                          <%= raw n.text.truncate(100) %>
