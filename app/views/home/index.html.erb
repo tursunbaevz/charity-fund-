@@ -137,8 +137,9 @@
                                                                         </div>
                                                                         <a href="<%= show_path(n) %>">
                                                                         <% if n.image_url(:thumb).nil? %>
-                                                                           <img class="ns2-image" style="float:left;margin:0 10px 0 0" src="http://placehold.it/125x90" alt="Maecenas be lgula molestie lobort" title="Maecenas be lgula molestie lobort" />
+
                                                                         <% else %>
+
                                                                            <img class="ns2-image" style="float:left;margin:0 10px 0 0; max-width: 125px;" src="<%= n.image_url(:thumb) %>" alt="" />
                                                                         <% end %>
 
