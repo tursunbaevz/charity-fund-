@@ -19,14 +19,11 @@
 <!-- end breadcrumbs -->
 <div class="container">
 	<div id="k2Container" class="lan_event_details itemView">
-
 		<div class="itemHeader">
 			<h2 class="itemTitle"><%= @admin_news.title %></h2>
 			<span class="itemDateCreated"><%= @admin_news.created_at.strftime("%m/%d/%Y")  %></span>
 		</div>
-
 		<div class="itemBody">
-
 		  <% if !@admin_news.image_url(:big).nil? %>
 		      <div class="itemImageBlock">
 		         <span class="itemImage">
@@ -34,8 +31,7 @@
 		         </span>
 		         <div class="clr"></div>
 		      </div>
-	      <% end %>
-	     
+	      <% end %>     
 	      <!-- Item fulltext -->
 	      <div class="itemFullText">
 	        <%= raw @admin_news.text %>
@@ -45,5 +41,4 @@
 	      <div class="clr"></div>
 	   </div>
    </div>
-
 </div>

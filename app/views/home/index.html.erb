@@ -21,7 +21,7 @@
                                                 <!-- SLIDE  -->
                                                 <li data-transition="random-premium" data-slotamount="7" data-masterspeed="300" data-fstransition="notselectable1" data-fsmasterspeed="300" data-fsslotamount="7">
                                                    <!-- MAIN IMAGE -->
-                                                   <img src="/orphan-1139042_960_720.jpg" alt="slide1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                                   <img src="/hand-charity.jpg" alt="slide1" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                                                    <!-- LAYERS -->
                                                    <!-- LAYER NR. 1 -->
                                                    <div class="tp-caption large_bold_white sfl tp-resizeme" data-x="0" data-y="150" data-speed="800" data-start="500" data-easing="Power3.easeInOut" data-splitin="words" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">This is my very own slide
@@ -30,13 +30,13 @@
                                                    <div class="tp-caption medium_light_white sfr tp-resizeme" data-x="0" data-y="230" data-speed="800" data-start="800" data-easing="Power3.easeInOut" data-splitin="words" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">You can help!
                                                    </div>
                                                    <!-- LAYER NR. 3 -->
-                                                   <div class="tp-caption large_bold_white sfb tp-resizeme" data-x="0" data-y="290" data-speed="1500" data-start="1400" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='slide_button btn btn-primary'>Join with us</a>
+                                                   <div class="tp-caption large_bold_white sfb tp-resizeme" data-x="0" data-y="290" data-speed="1500" data-start="1400" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><a href='<%=  new_email_path %>' class='slide_button btn btn-primary'>Contact Us</a>
                                                    </div>
                                                 </li>
                                                 <!-- SLIDE  -->
                                                 <li data-transition="random-premium" data-slotamount="7" data-masterspeed="300">
                                                    <!-- MAIN IMAGE -->
-                                                   <img src="/children-of-uganda-1994833_960_720.jpg" alt="slide2" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                                                   <img src="/child.jpg" alt="slide2" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                                                    <!-- LAYERS -->
                                                    <!-- LAYER NR. 1 -->
                                                    <div class="tp-caption large_bold_white sfl tp-resizeme" data-x="0" data-y="150" data-speed="800" data-start="500" data-easing="Power3.easeInOut" data-splitin="words" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 2; max-width: auto; max-height: auto; white-space: nowrap;">HELP 100 CHILDREN FOR THEIR EDUCATION
@@ -45,7 +45,7 @@
                                                    <div class="tp-caption medium_light_white sfr tp-resizeme" data-x="0" data-y="230" data-speed="800" data-start="800" data-easing="Power3.easeInOut" data-splitin="words" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 3; max-width: auto; max-height: auto; white-space: nowrap;">No one has ever become poor by giving
                                                    </div>
                                                    <!-- LAYER NR. 3 -->
-                                                   <div class="tp-caption medium_light_white sfb tp-resizeme" data-x="0" data-y="300" data-speed="1500" data-start="1400" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><a href='#' class='slide_button btn btn-primary'>Join with us</a>
+                                                   <div class="tp-caption medium_light_white sfb tp-resizeme" data-x="0" data-y="300" data-speed="1500" data-start="1400" data-easing="Power3.easeInOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" data-endspeed="300" style="z-index: 4; max-width: auto; max-height: auto; white-space: nowrap;"><a href='<%= new_email_path %>' class='slide_button btn btn-primary'>Contact Us</a>
                                                    </div>
                                                 </li>
                                              </ul>
@@ -95,6 +95,7 @@
 
                                                       <h2><%= link_to n.title, show_path(n) %> </h2>  
                                                       <p><%= raw n.text.truncate(400) %></p>
+
                                                       <a class="btn btn-primary" href="<%= show_path(n) %>">  Read more</a>
                                                    </div>
                                                  </div>
@@ -146,7 +147,7 @@
                                                                         </a>
                                                                         <p class="ns2-introtext">
                                                                          <%= raw n.text.truncate(100) %>
-
+                                                                        
                                                                         </p>
                                                                         <div class="ns2-social">
                                                                         </div>

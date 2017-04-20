@@ -17,15 +17,14 @@
             <td><%= strip_tags n.text  %></td>
             <td><%= check_box_tag 'is_published', '1', n.is_published %></td>
             <td><%= image_tag n.image_url(:thumb) if n.image? %></td>
-
-            <td> <%= link_to 'Show', admin_news_path(n),  class: 'btn btn-info' %>
-              <%= link_to 'Edit', edit_admin_news_path(n), class: 'btn btn-primary'  %>
+            
+            <td> <%= link_to 'Edit', edit_admin_news_path(n), class: 'btn btn-primary'  %>
+                <%= link_to 'Show', admin_news_path(n),  class: 'btn btn-info' %>
               <%= link_to 'Delete', admin_news_path(n),  class: 'btn btn-danger',
                                    method: :delete, data: { confirm: 'Are you sure?' } %>
             </td>                        
           </tr>
         <% end %>
     </table>
-
   </div>
 </div>
