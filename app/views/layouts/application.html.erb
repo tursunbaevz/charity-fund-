@@ -9,7 +9,7 @@
       <meta http-equiv="content-type" content="text/html; charset=utf-8" />
       <meta name="generator" content="" />
       <!-- title -->
-      <title>Grant | Home</title>
+      <title>Charity fund</title>
       <%= stylesheet_link_tag    'application', media: "all" %>
       <%= javascript_include_tag 'application'  %>
       <%= csrf_meta_tags %>
@@ -43,7 +43,7 @@
                      <div class="sp-column ">
                         <ul class="sp-contact-info">
                            <!-- <li class="sp-contact-phone"><i class="fa fa-phone"></i> +228 872 444\</li> -->
-                           <li class="sp-contact-email"><i class="fa fa-envelope"></i> <a href="mailto:contact@email.com">  <%= link_to 'Contact Us', new_email_url %></a></li>
+                           <li class="sp-contact-email"><i class="fa fa-envelope"></i> <a href="mailto:contact@email.com">  <%= link_to 'Отправить SMS', new_email_url %></a></li>
                         </ul>
                      </div>
                   </div>
@@ -68,13 +68,13 @@
                         <div class='sp-megamenu-wrapper'>
                            <ul class="sp-megamenu-parent menu-fade-up hidden-xs">
                               <li class="sp-menu-item sp-has-child">
-                                 <li> <%= link_to 'Home', root_path %> </li>
+                                 <li> <%= link_to 'Главная', root_path %> </li>
                               </li>
                               <li class="sp-menu-item">
-                                 <%= link_to 'News', news_path %>
+                                <%= link_to 'Новости', news_path %>
                               </li>
                               <li class="sp-menu-item">
-                                 <a href="<%= about_path %>">About</a>
+                                 <a href="<%= about_path %>">О Нас</a>
                                  
                               </li>
                            </ul>
@@ -196,24 +196,7 @@
          </footer>
          <!-- end footer -->
          <!-- Start offcanvas-menu -->
-         <div class="offcanvas-menu">
-            <a href="#" class="close-offcanvas"><i class="fa fa-remove"></i></a>
-            <div class="offcanvas-inner">
-               <div class="sp-module">
-                  <h3 class="sp-module-title">Search</h3>
-                  <div class="sp-module-content">
-                     <div class="search">
-                        <form action="#" method="post">
-                           <input name="searchword" maxlength="200" class="inputbox search-query" type="text" size="20" placeholder="Search ..." />
-                           <input type="hidden" name="task" value="search" />
-                           <input type="hidden" name="option" value="com_search" />
-                           <input type="hidden" name="Itemid" value="437" />
-                        </form>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+      
          <!-- End offcanvas-menu -->
       </div>
       <!-- main js library -->

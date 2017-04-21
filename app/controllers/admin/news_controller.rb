@@ -3,6 +3,8 @@ class Admin::NewsController < ApplicationController
   layout 'admin'
   before_action :authenticate_admin!
 
+   
+
   # GET /admin/news
   # GET /admin/news.json
   def index
