@@ -24,10 +24,17 @@
 			<span class="itemDateCreated"><%= @admin_news.created_at.strftime("%m/%d/%Y")  %></span>
 		</div>
 		<div class="itemBody">
-		  <% if !@admin_news.image_url(:big).nil? %>
+		  <% if @admin_news.image.present? %>
 		      <div class="itemImageBlock">
 		         <span class="itemImage">
-		         <img src="<%= @admin_news.image_url(:big) %>" alt="Fusce pulvinar consectetur">
+		         <img src="<%= @admin_news.image_url(:med) %>" alt="Fusce pulvinar consectetur">
+		         </span>
+		         <div class="clr"></div>
+		      </div>
+		      <% else %>
+		       <div class="itemImageBlock">
+		         <span class="itemImage">
+		         <img src="/default.png" alt="Fusce pulvinar consectetur">
 		         </span>
 		         <div class="clr"></div>
 		      </div>
