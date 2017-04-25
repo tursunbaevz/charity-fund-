@@ -51,6 +51,8 @@ Rails.application.configure do
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
 
+  config.action_mailer.default_url_options = { :host => "charityfund.com" }
+
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
    config.action_mailer.delivery_method = :smtp
