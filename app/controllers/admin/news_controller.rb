@@ -11,6 +11,15 @@ class Admin::NewsController < ApplicationController
     @admin_news = News.all.order('created_at DESC')
   end
 
+  def image
+  begin
+    image = S3Store.new(params[:upload][:image]).store
+    #...
+  rescue Exception => e
+    #...
+   end
+ end
+
   # GET /admin/news/1
   # GET /admin/news/1.json
   def show

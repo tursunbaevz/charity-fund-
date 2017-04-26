@@ -39,6 +39,7 @@ gem 'rmagick', "~> 2.13.3", :require => false
 gem "letter_opener", :group => :development
 
 gem 'sendgrid-ruby'
+gem 'aws-sdk', '~> 2'
 
 gem 'jquery-turbolinks'
 # Use Unicorn as the app server
