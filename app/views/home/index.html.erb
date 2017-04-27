@@ -106,7 +106,7 @@
                                                    <div class="tab_contain">
 
                                                       <h2><%= link_to n.title, show_path(n) %> </h2>  
-                                                      <p><%= raw n.text.truncate(400) %></p>
+                                                      <p><%= strip_tags n.text.truncate(400) %></p>
 
                                                       <a class="btn btn-primary" href="<%= show_path(n) %>">  Подробнее</a>
                                                    </div>
@@ -131,7 +131,7 @@
                                                    <div class="ns2-page item active">
                                                       <div class="ns2-page-inner"> 
                                                          <div class="ns2-row ns2-first ns2-odd">
-                                                          <% News.all.first(3).each do |n| %>
+                                                          <% News.all.first(4).each do |n| %>
                                                             <div class="ns2-row-inner">
                                                                <div class="ns2-column flt-left col-1">
                                                                   <div style="padding:3px 3px 3px 3px">
@@ -153,12 +153,12 @@
 
                                                                         <% else %>
 
-                                                                           <img class="ns2-image" style="float:left;margin:0 10px 0 0; max-width: 125px;" src="<%= n.image_url(:thumb) %>" alt="" />
+                                                                           <img class="ns2-image" style="float:left;margin:0 10px 0 0; max-width: 125px;" src="<%=  n.image_url(:thumb) %>" alt="" />
                                                                         <% end %>
 
                                                                         </a>
                                                                         <p class="ns2-introtext">
-                                                                         <%= raw n.text.truncate(100) %>
+                                                                         <%= strip_tags n.text.truncate(100) %>
                                                                         
                                                                         </p>
                                                                         <div class="ns2-social">
