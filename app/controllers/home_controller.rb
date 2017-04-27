@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   end
 
   def show
-   @admin_news = News.find(params[:id]) 
+   @admin_news = News.find(params[:id])
   end
 
   
