@@ -97,21 +97,21 @@
                                        <div class="module">
                                           <div class="lan_vertical_timeline">
                                              <% News.all.first(1).each do |n| %>
-                                              <div class="tab-content">
-                                                <div role="tabpanel" class="tab-pane active" id="home">
-                                                   
-                                                   <div class="tab_img">
-                                                      <a href="<%= show_path(n) %>" ><img src="<%= n.image_url(:med) %>" alt="" /></a>
-                                                   </div>
-                                                   <div class="tab_contain">
+                                                <div class="tab-content">
+                                                   <div role="tabpanel" class="tab-pane active" id="home">
+                                                         <div class="tab_img">
+                                                            <a href="<%= show_path(n) %>" ><img src="<%= n.image_url(:med) %>" alt="" /></a>
+                                                         </div>
+                                                      <div class="index-news-text"> 
+                                                          <div class="tab_contain">
 
-                                                      <h2><%= link_to n.title, show_path(n) %> </h2>  
-                                                      <p><%= strip_tags n.text.truncate(400) %></p>
-
-                                                      <a class="btn btn-primary" href="<%= show_path(n) %>">  Подробнее</a>
+                                                            <h2><%= link_to n.title, show_path(n) %> </h2> 
+                                                               <p><%= strip_tags n.text.truncate(600) %></p>
+                                                            <a class="btn btn-primary" href="<%= show_path(n) %>">  Подробнее</a>
+                                                          </div>
+                                                      </div>
                                                    </div>
-                                                 </div>
-                                              </div>
+                                                </div>
                                              <% end %>  
                                           </div>
                                           <div class="clear"></div>
@@ -131,7 +131,7 @@
                                                    <div class="ns2-page item active">
                                                       <div class="ns2-page-inner"> 
                                                          <div class="ns2-row ns2-first ns2-odd">
-                                                          <% News.all.first(4).each do |n| %>
+                                                          <% News.all.first(3).each do |n| %>
                                                             <div class="ns2-row-inner">
                                                                <div class="ns2-column flt-left col-1">
                                                                   <div style="padding:3px 3px 3px 3px">
@@ -157,10 +157,12 @@
                                                                         <% end %>
 
                                                                         </a>
-                                                                        <p class="ns2-introtext">
-                                                                         <%= strip_tags n.text.truncate(100) %>
-                                                                        
-                                                                        </p>
+                                                                      
+                                                                           <p class="ns2-introtext">
+                                                                            <%= strip_tags n.text.truncate(100) %>
+                                                                           
+                                                                           </p>
+                                                                       
                                                                         <div class="ns2-social">
                                                                         </div>
                                                                         <div class="clear"></div>

@@ -19,14 +19,14 @@
 	<!-- end breadcrumbs -->
 
 <div class="container">
-		
+	<div class="all">
 		<% News.all.each do |n| %>
 	  	    <div class="catItemHeader">
 	            <div class="catItemImageBlock">
 		  			<% if n.image.present?  %>
 	                <span class="catItemImage">
 	                	<a href="<%= show_path(n) %>" title="Proin facilisis egest pellentesque">
-	                 	<img src="<%= n.image_url(:med) %>" alt="Image available soon" style="width:515px; height:auto;" />
+	                 	<img src="<%= n.image_url(:med) %>" alt="Image available soon" style="width:315px; height:auto;" />
 	                 	</a>
 	                </span>
 
@@ -40,18 +40,21 @@
 	                <div class="clr"></div>
                 </div>
             </div>
-            <div class="catItemBody">
-	              <h1 class="catItemTitle">
-				 	<a href="<%= show_path(n) %>"><%= n.title %></a>
-	              </h1>
-	              <div class="catItemIntroText">
-		            <h3><%= strip_tags n.text.truncate(700) %></h3>			
-	              </div>  
-	              <div class="clr"></div>
+            <div class="news-title">
+	            <div class="catItemBody">
+			        <h1 class="catItemTitle"> 
+						<a href="<%= show_path(n) %>"><%= n.title %></a>
+			        </h1>
+	                <div class="news-text">
+		               <div class="catItemIntroText">
+			           	 <%= strip_tags n.text.truncate(300) %>			
+		               </div>  
+	                </div>
+			    </div>
+		      <div class="clr"></div>
 	        </div>
-	    
 		           
 	       
 		<% end %>
-	
+	</div>
 </div>
