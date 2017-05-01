@@ -1,9 +1,10 @@
 .show-text div{
-	font-size: 24px;
+	font-size: 18px;
 	color: #4d4d4d;
 	font-family: 'Proxima-nova';
 	padding-bottom: 35px;
 	line-height: 29px;
+	width: 89.5%;
 
 }
 
@@ -14,3 +15,7 @@
 }
 
 
+img {
+	max-width: 100%;
+	height: auto;
+}
