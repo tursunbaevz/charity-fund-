@@ -61,14 +61,18 @@
 
 .button-index{
 	font-size: 17px;
-    font-family: sans-serif;
 }
 
 .introtext-index {
 	color: #4d4d4d;
+	line-height: 20px;
 
 }
 
 
 
+img {
+	max-width: 100%;
+	height: auto;
+}
 

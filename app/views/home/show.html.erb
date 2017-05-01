@@ -17,7 +17,7 @@
 	</div>
 </section>
 <!-- end breadcrumbs -->
-<div class="container">
+<div class="wrapper">
 	<div id="k2Container" class="lan_event_details itemView">
 		<div class="title-show">
 			<div class="itemHeader">
@@ -25,33 +25,31 @@
 				<span class="itemDateCreated"><%= @admin_news.created_at.strftime("%m/%d/%Y")  %></span>
 			</div>
 		</div>
-		<div class="itemBody">
-		  <% if @admin_news.image.present? %>
-		      <div class="itemImageBlock">
-		         <span class="itemImage">
-		         <img src="<%= @admin_news.image_url(:big) %>" alt="Fusce pulvinar consectetur"  height="300" width="900">
-		         </span>
-		         <div class="clr"></div>
-		      </div>
-		      <% else %>
-		       <div class="itemImageBlock">
-		         <span class="itemImage">
-		         <img src="/default.png" alt="Fusce pulvinar consectetur">
-		         </span>
-		         <div class="clr"></div>
-		      </div>
-	      <% end %>     
-	      <!-- Item fulltext -->
-	      <div class="show-text">
-		      <div class="col-md-12">	
-		          <div class="itemFullText">
-			         <%= raw @admin_news.text %>
-			      </div>
-		      </div>
-		  </div>
+	    <% if @admin_news.image.present? %>
+	      <div class="itemImageBlock">
+	         <span class="itemImage">
+	         	<img src="<%= @admin_news.image_url(:big) %>" alt="Image is coming soon"  
+	         </span>
+	         <div class="clr"></div>
+	      </div>
+	    <% else %>
+	       <div class="itemImageBlock">
+	         <span class="itemImage">
+	         	<img src="/default.png" alt="Fusce pulvinar consectetur">
+	         </span>
+	         <div class="clr"></div>
+	        </div>
+        <% end %>     
+      <!-- Item fulltext -->
+		    <div class="show-text">
+			    <div class="col-md-12">	
+			        <div class="itemFullText">
+				        <%= raw @admin_news.text %>
+				    </div>
+			    </div>
+			</div>
 	      <div class="clr"></div>
-	      <div class="clr"></div>
-	   </div>
-   </div>
+	    <div class="clr"></div>
+	</div>
 </div>
 

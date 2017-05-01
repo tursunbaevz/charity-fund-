@@ -107,7 +107,7 @@
 
                                                             <h2><%= link_to n.title, show_path(n) %> </h2> 
                                                                <p><%= strip_tags n.text.truncate(600) %></p>
-                                                            <a class="btn btn-primary" href="<%= show_path(n) %>">  Подробнее</a>
+                                                            <a class="btn btn-primary" href="<%= show_path(n) %>" style="font-family: sans-serif;">  Подробнее</a>
                                                           </div>
                                                       </div>
                                                    </div>
@@ -131,7 +131,7 @@
                                                    <div class="ns2-page item active">
                                                       <div class="ns2-page-inner"> 
                                                          <div class="ns2-row ns2-first ns2-odd">
-                                                          <% News.all.first(3).each do |n| %>
+                                                          <% News.all.first(4).each do |n| %>
                                                             <div class="ns2-row-inner">
                                                                <div class="ns2-column flt-left col-1">
                                                                   <div style="padding:3px 3px 3px 3px">
