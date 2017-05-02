@@ -24,6 +24,10 @@
 
 .itemImage {
 	padding-left: 15px;
+	width: 100%;
+	max-width: 80rem;
+	
+
 
 }
 
